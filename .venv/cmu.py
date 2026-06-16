@@ -1,6 +1,6 @@
 import os  # For accessing environment variables
 from pathlib import Path
-
+#taken llm7 api @ https://token.llm7.io/
 from dotenv import load_dotenv  # Library to load environment variables from .env file
 from openai import OpenAI  # Import the OpenAI client library
 
