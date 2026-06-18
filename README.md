@@ -2,6 +2,8 @@
 
 Upload a PDF, pick a topic and question count, and get an instant quiz with answer feedback.
 
+Coursework repo — CMU summer internship @ Carnegie Mellon University Pittsburgh.
+
 ## Features
 
 - PDF upload with text extraction
