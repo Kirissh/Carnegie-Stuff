@@ -84,10 +84,10 @@ export default function App() {
 
     try {
       let questions
-      if (settings.openAiApiKey) {
+      if (settings.llm7ApiKey) {
         try {
           questions = await generateQuizWithAI(
-            paper.text, quizSettings, settings.openAiApiKey, options.topic || undefined,
+            paper.text, quizSettings, settings.llm7ApiKey, options.topic || undefined,
           )
         } catch {
           questions = generateQuizFromText(paper.text, quizSettings, options.topic || undefined)

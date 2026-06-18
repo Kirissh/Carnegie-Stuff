@@ -64,7 +64,13 @@ export function getSessionsForPaper(paperId: string): QuizSession[] {
 }
 
 export function getSettings(): AppSettings {
-  return load<AppSettings>(SETTINGS_KEY, DEFAULT_APP_SETTINGS)
+  const stored = load<AppSettings>(SETTINGS_KEY, DEFAULT_APP_SETTINGS)
+  const llm7ApiKey =
+    stored.llm7ApiKey
+    ?? stored.openAiApiKey
+    ?? import.meta.env.VITE_LLM7_API_KEY
+    ?? undefined
+  return { quiz: stored.quiz, llm7ApiKey }
 }
 
 export function saveSettings(settings: AppSettings): void {

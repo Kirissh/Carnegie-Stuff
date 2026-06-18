@@ -43,6 +43,8 @@ export interface QuizSettings {
 
 export interface AppSettings {
   quiz: QuizSettings
+  llm7ApiKey?: string
+  /** @deprecated migrated to llm7ApiKey */
   openAiApiKey?: string
 }
 
@@ -58,4 +60,5 @@ export const DEFAULT_QUIZ_SETTINGS: QuizSettings = {
 
 export const DEFAULT_APP_SETTINGS: AppSettings = {
   quiz: DEFAULT_QUIZ_SETTINGS,
+  llm7ApiKey: import.meta.env.VITE_LLM7_API_KEY || undefined,
 }

@@ -81,15 +81,15 @@ export default function SettingsModal({ settings, onSave, onClose }: SettingsMod
         </div>
 
         <div className="mb-6">
-          <label className="text-sm font-medium block mb-2">OpenAI API key (optional)</label>
+          <label className="text-sm font-medium block mb-2">LLM7.io API token</label>
           <input
             type="password"
-            placeholder="sk-..."
-            value={local.openAiApiKey ?? ''}
-            onChange={(e) => setLocal((s) => ({ ...s, openAiApiKey: e.target.value || undefined }))}
+            placeholder="Get one at token.llm7.io"
+            value={local.llm7ApiKey ?? ''}
+            onChange={(e) => setLocal((s) => ({ ...s, llm7ApiKey: e.target.value || undefined }))}
             className="input"
           />
-          <p className="text-xs text-muted mt-1">Better questions when set. Works offline without it.</p>
+          <p className="text-xs text-muted mt-1">Powers AI quiz generation. Falls back to offline mode without it.</p>
         </div>
 
         <div className="flex gap-2 mb-6">
